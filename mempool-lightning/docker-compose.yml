@@ -7,7 +7,7 @@ services:
       APP_PORT: $APP_MEMPOOL_PORT
       PROXY_AUTH_ADD: "false"
   web:
-    image: knorrium/frontend:latest
+    image: nymkappa/frontend:latest
     user: "1000:1000"
     init: true
     restart: on-failure
@@ -25,7 +25,7 @@ services:
       default:
         ipv4_address: $APP_MEMPOOL_IP
   api:
-    image: knorrium/backend:latest
+    image: nymkappa/backend:latest
     user: "1000:1000"
     init: true
     restart: on-failure
@@ -55,7 +55,7 @@ services:
        default:
          ipv4_address: $APP_MEMPOOL_API_IP
   api_lightning:
-    image: knorrium/backend:latest
+    image: nymkappa/backend:latest
     user: "1000:1000"
     init: true
     restart: on-failure
